@@ -20,7 +20,7 @@ describe('StringCalculator', function () {
     assert.strictEqual(calculator.add('1,2'), 3);
   });
 
-  it('should handle unknown amount of numbers', function () {
+  it('should handle an unknown amount of numbers', function () {
     assert.strictEqual(calculator.add('1,2,3,4,5'), 15);
   });
 

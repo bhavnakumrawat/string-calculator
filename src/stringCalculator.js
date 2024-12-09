@@ -1,8 +1,8 @@
 class StringCalculator {
   add(numbers) {
-    if (!numbers) return 0; // Empty string case
+    if (!numbers) return 0; // Rule: Empty string case
 
-    let delimiter = /,|\n/; // Default delimiters
+    let delimiter = /,|\n/; // Default delimiters (`,` or `\n`)
 
     // Handle custom delimiters
     if (numbers.startsWith('//')) {
@@ -19,7 +19,7 @@ class StringCalculator {
 
     const numArray = numbers.split(delimiter).map(Number);
 
-    // Handle negatives
+    // Handle negative numbers
     const negatives = numArray.filter(n => n < 0);
     if (negatives.length) {
       throw new Error(`negatives not allowed: ${negatives.join(', ')}`);
